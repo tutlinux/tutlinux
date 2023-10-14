@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    ".vscode": true,
+    "scripts": true,
+    "node_modules": true
+  },
+  "npm-scripts.showStartNotification": false,
+  "workspace.isHidden": true,
+  "workspace.disableCounter": true,
+  "workspace.disableColoring": false,
+  "workspace.alwaysShowToggle": true,
+  "workspace.statusbarPriority": 0
+}

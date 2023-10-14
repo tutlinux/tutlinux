@@ -1,0 +1,49 @@
+{
+  "name": "tutlinux",
+  "version": "1.0.0",
+  "description": "Онлайн-справочник для начинающих пользователей ОС на базе ядра Linux",
+  "main": "index.js",
+  "scripts": {
+		"commit": "git cz",
+		"commit:all": "git add --all && git cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tutlinux/tutlinux.git"
+  },
+  "keywords": [
+    "tutlinux",
+    "tl",
+    "linux",
+    "eleventyjs",
+    "11ty",
+    "sass",
+    "vedanta",
+    "sassify",
+    "therteenten"
+  ],
+  "author": "Haba Kudzaev (therteenten)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tutlinux/tutlinux/issues"
+  },
+  "homepage": "https://github.com/tutlinux/tutlinux#readme",
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-customizable"
+		},
+		"cz-customizable": {
+			"config": "scripts/cz/.commitizen.js"
+		}
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g 'scripts/cz/.commitlint.js'"
+		}
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.8.0",
+		"cz-customizable": "^7.0.0",
+		"husky": "^8.0.3"
+	}
+}
