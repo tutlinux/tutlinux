@@ -4,8 +4,8 @@
   "description": "Онлайн-справочник для начинающих пользователей ОС на базе ядра Linux",
   "main": "index.js",
   "scripts": {
-		"commit": "git cz",
-		"commit:all": "git add --all && git cz"
+    "commit": "git cz",
+    "commit:all": "git add --all && git cz"
   },
   "repository": {
     "type": "git",
@@ -28,22 +28,28 @@
     "url": "https://github.com/tutlinux/tutlinux/issues"
   },
   "homepage": "https://github.com/tutlinux/tutlinux#readme",
-	"config": {
-		"commitizen": {
-			"path": "node_modules/cz-customizable"
-		},
-		"cz-customizable": {
-			"config": "scripts/cz/.commitizen.js"
-		}
-	},
-	"husky": {
-		"hooks": {
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g 'scripts/cz/.commitlint.js'"
-		}
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^17.8.0",
-		"cz-customizable": "^7.0.0",
-		"husky": "^8.0.3"
-	}
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "scripts/cz/.commitizen.js"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g 'scripts/cz/.commitlint.js'"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.8.0",
+    "cz-customizable": "^7.0.0",
+    "husky": "^8.0.3"
+  },
+  "workspaces": [
+    "packages/platform",
+    "packages/content",
+    "packages/sassify",
+    "packages/vedanta"
+  ]
 }

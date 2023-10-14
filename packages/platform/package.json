@@ -1,0 +1,14 @@
+{
+  "name": "@tutlinux/platform",
+  "version": "1.0.0",
+  "description": "Пакет содержит в себе почти всю базу сайта, в т.ч. и шаблоны на языке HTML-шаблонизатора Nunjucks, JS-скрипты, шрифты, дизайн и все то, что касается сайта.",
+	"publishConfig": {
+		"access": "private"
+	},
+  "main": "index.njk",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}

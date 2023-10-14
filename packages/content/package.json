@@ -1,0 +1,13 @@
+{
+  "name": "@tutlinux/content",
+  "version": "1.0.0",
+  "description": "Пакет содержит в себе только контент сайта - Markdown и изображения.",
+	"publishConfig": {
+		"access": "private"
+	},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "SEE LICENSE IN LICENSE.md"
+}

@@ -1,0 +1,38 @@
+{
+	"name": "@tutlinux/sassify",
+	"version": "1.0.0",
+	"description": "Большой набор миксинов и функций на языке CSS-препроцессора Sass для упрощения, улучшения и ускорения процесса написания стилей для веб-сайтов.",
+	"main": "index.scss",
+	"scripts": {
+		"test": "sass tests/index.scss:tests/output.css --no-source-map && npm run docs",
+		"docs": "npx sassdoc . -d docs/",
+		"publish": "npm publish --access public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tutlinux/tutlinux.git"
+	},
+	"keywords": [
+		"sassify",
+		"sassdoc",
+		"sass",
+		"scss",
+		"sass-library",
+		"scss-library",
+		"sass-mixins",
+		"scss-mixins",
+		"sass-functions",
+		"scss-functions",
+		"therteenten",
+		"tutlinux"
+	],
+	"author": "Haba Kudzaev (therteenten)",
+	"license": "MIT",
+	"homepage": "https://github.com/tutlinux/tutlinux#readme",
+	"bugs": {
+		"url": "https://github.com/tutlinux/tutlinux/issues"
+	},
+	"dependencies": {
+		"sass": "^1.64.2"
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@tutlinux/vedanta",
+  "version": "1.0.0",
+  "description": "Пакет является CSS-библиотекой для сайта TutLinux. Здесь только стили, сетка, ресет браузерных стилей и прочее. Написано на CSS-препроцессоре Sass.",
+  "main": "index.scss",
+  "devDependencies": {},
+  "author": "Haba Kudzaev (therteenten)",
+  "license": "MIT"
+}
