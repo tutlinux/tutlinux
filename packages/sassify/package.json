@@ -30,7 +30,7 @@
 	"license": "MIT",
 	"homepage": "https://github.com/tutlinux/tutlinux#readme",
 	"bugs": {
-		"url": "https://github.com/tutlinux/tutlinux/issues"
+		"url": "https://github.com/tutlinux/tutlinux/labels/pkg%3A%20sassify"
 	},
 	"dependencies": {
 		"sass": "^1.64.2"
