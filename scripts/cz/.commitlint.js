@@ -42,7 +42,8 @@ module.exports = {
 				"style",
 				"test",
 				"config",
-				"dependencies"
+				"dependencies",
+				"experiments"
 			]
 		]
 	}

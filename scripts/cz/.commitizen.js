@@ -16,6 +16,7 @@ module.exports = {
 		{ value: "test", name: "test: Добавление тестов" },
 		{ value: "config", name: "config: Изменения конфигов" },
 		{ value: "dependencies", name: "dependencies: Зависимости (добавление, обновление, изменение или удаление)" },
+		{ value: "experiments", name: "experiments: Эксперименты с кодом и утилитами" },
 	],
 
 	// Область. Она характеризует фрагмент кода, которую затронули изменения
@@ -25,6 +26,7 @@ module.exports = {
 		{ name: 'content' },
 		{ name: 'vedanta' },
 		{ name: 'sassify' },
+		{ name: 'cz' },
 	],
 
 	// Возможность задать спец ОБЛАСТЬ для определенного типа коммита (пример для 'fix')
