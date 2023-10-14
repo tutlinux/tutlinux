@@ -22,7 +22,6 @@ module.exports = {
 	// Область. Она характеризует фрагмент кода, которую затронули изменения
 	scopes: [
 		{ name: 'tl' },
-		{ name: 'platform' },
 		{ name: 'content' },
 		{ name: 'vedanta' },
 		{ name: 'sassify' },

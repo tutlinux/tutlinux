@@ -47,7 +47,6 @@
     "husky": "^8.0.3"
   },
   "workspaces": [
-    "packages/platform",
     "packages/content",
     "packages/sassify",
     "packages/vedanta"
