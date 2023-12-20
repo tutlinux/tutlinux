@@ -1,15 +1,16 @@
 {
   "files.exclude": {
-		".vscode": true,
-		"node_modules": true,
-		".commitizen.js": true,
-		".commitlint.js": true,
-		".editorconfig": true,
-		".gitignore": true,
-		".npmrc": true,
-		"CODEOWNERS": true,
-		"LICENSE": true,
-		"package-lock.json": true
+		".vscode": false,
+		"node_modules": false,
+		".commitizen.js": false,
+		".commitlint.js": false,
+		".editorconfig": false,
+		".gitignore": false,
+		".npmrc": false,
+		"CODEOWNERS": false,
+		"LICENSE": false,
+		"package-lock.json": false,
+		".eleventy.js": false
 	},
   "npm-scripts.showStartNotification": false,
   "workspace.isHidden": false,

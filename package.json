@@ -4,6 +4,12 @@
   "description": "Онлайн-справочник для начинающих пользователей ОС на базе ядра Linux",
   "main": "index.js",
   "scripts": {
+		"start": "npx @11ty/eleventy --serve --quiet --config=.eleventy.js",
+		"start:debug": "DEBUG=tl-11ty* npx @11ty/eleventy --serve --quiet --config=.eleventy.js",
+		"build": "npx @11ty/eleventy --config=.eleventy.js",
+		"build:ghpages": "npx @11ty/eleventy --pathprefix=/tutlinux-ghp/ --config=.eleventy.js",
+		"build:debug": "DEBUG=tl-11ty* npx @11ty/eleventy --config=.eleventy.js",
+		"benchmark": "DEBUG=tl-11ty:benchmark* npx @11ty/eleventy --config=.eleventy.js",
     "commit": "git cz",
     "commit:all": "git add --all && git cz"
   },
@@ -45,10 +51,15 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-cache-assets": "^2.3.0",
     "@11ty/eleventy-img": "^3.1.8",
+		"@11ty/eleventy-navigation": "^0.3.5",
+		"@11ty/eleventy-plugin-bundle": "^1.0.5",
+		"@11ty/eleventy-plugin-rss": "^1.2.0",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@commitlint/cli": "^18.4.3",
     "cz-customizable": "^7.0.0",
     "husky": "^8.0.3",
-    "markdown-it": "^14.0.0"
+    "markdown-it": "^14.0.0",
+    "markdown-it-anchor": "^8.6.7"
   },
   "workspaces": [
     "packages/content",

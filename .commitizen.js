@@ -25,6 +25,7 @@ module.exports = {
 		{ name: 'content' },
 		{ name: 'vedanta' },
 		{ name: 'sassify' },
+		{ name: '11ty' },
 		{ name: 'cz' },
 	],
 
