@@ -3,14 +3,13 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const yaml = require("js-yaml");
 
 module.exports = function(eleventyConfig) {
 
-	eleventyConfig.addPassthroughCopy({
-		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
-	});
+	eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
-	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
+	eleventyConfig.addWatchTarget("src/**/*.{svg,webp,png,jpeg}");
 
 	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
 		preAttributes: { tabindex: 0 }
@@ -22,7 +21,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.amendLibrary("md", mdLib => {
 		mdLib.use(markdownItAnchor, {
 			permalink: markdownItAnchor.permalink.ariaHidden({
-				placement: "after",
+				placement: "before",
 				class: "header-anchor",
 				symbol: "#",
 				ariaHidden: false,
@@ -32,24 +31,27 @@ module.exports = function(eleventyConfig) {
 		});
 	});
 
-	return {
+	eleventyConfig.addPassthroughCopy({
+		"./node_modules/prismjs/themes/prism-okaidia.css": "/stylesheets/prism-okaidia.css",
+		"src/javascript/": "/javascript/"
+	});
 
-		templateFormats: [
-			"md",
-			"njk",
-			"html"
-		],
+  return {
 
-		dir: {
-			input: ".",
-			includes: "./platform/templates",
-			data: "./platform/data",
-			output: "./build/tutlinux/"
-		},
+    dir: {
+      input: 'src',
+      output: 'dist',
+      includes: 'templates/includes',
+      layouts: 'templates/layouts',
+      data: 'data',
+    },
 
-		markdownTemplateEngine: "njk",
-		htmlTemplateEngine: "njk",
-		pathPrefix: "/",
+    dataTemplateEngine: 'njk',
+    markdownTemplateEngine: false,
+    htmlTemplateEngine: 'njk',
+    passthroughFileCopy: true,
+    templateFormats: ['md', 'njk'],
 
-	};
+  }
+
 };
