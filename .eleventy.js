@@ -32,7 +32,7 @@ module.exports = function(eleventyConfig) {
 	});
 
 	eleventyConfig.addPassthroughCopy({
-		"./node_modules/prismjs/themes/prism-okaidia.css": "/stylesheets/prism-okaidia.css",
+		"./node_modules/prismjs/themes/prism-okaidia.css": "/styles/prism-okaidia.css",
 		"src/javascript/": "/javascript/"
 	});
 
